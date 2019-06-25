@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.List;
 
 public class MainClass {
     public static int[] stringToIntegerArray(String input) {
@@ -61,6 +62,12 @@ public class MainClass {
 
 //        new Solution().lengthOfLongestSubstring("au");
 
-        new LongestPalindromeSolution().longestPalindrome("aaaa");
+//        new LongestPalindromeSolution().longestPalindrome("aaaa");
+
+//        boolean isMatch = new RegularExpressionMatchingSolution().isMatch("aaa", "ab*a");
+//        System.out.println("RegularExpressionMatchingSolution.isMatch is " + isMatch);
+
+        int[] nums = {1,1,-2};
+        List<List<Integer>> result = new ThreeSumSolution().threeSum(nums);
     }
 }
