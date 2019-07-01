@@ -41,5 +41,4 @@ public class GenerateParenthesesSolution {
         }
         return balance==0;
     }
-
 }
