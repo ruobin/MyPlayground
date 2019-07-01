@@ -67,7 +67,9 @@ public class MainClass {
 //        boolean isMatch = new RegularExpressionMatchingSolution().isMatch("aaa", "ab*a");
 //        System.out.println("RegularExpressionMatchingSolution.isMatch is " + isMatch);
 
-        int[] nums = {1,1,-2};
-        List<List<Integer>> result = new ThreeSumSolution().threeSum(nums);
+//        int[] nums = {1,1,-2};
+//        List<List<Integer>> current = new ThreeSumSolution().threeSum(nums);
+
+        new GenerateParenthesesSolution().generateParenthesis(3);
     }
 }
