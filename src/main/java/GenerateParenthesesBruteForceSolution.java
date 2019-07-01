@@ -4,7 +4,7 @@ import java.util.List;
 /**
  * Created by Ruobin Wang on 2019-07-01.
  */
-public class GenerateParenthesesSolution {
+public class GenerateParenthesesBruteForceSolution {
 
     List resultsList = new ArrayList();
     char[] current;

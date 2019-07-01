@@ -1,5 +1,4 @@
 import java.io.IOException;
-import java.util.List;
 
 public class MainClass {
     public static int[] stringToIntegerArray(String input) {
@@ -70,6 +69,6 @@ public class MainClass {
 //        int[] nums = {1,1,-2};
 //        List<List<Integer>> result = new ThreeSumSolution().threeSum(nums);
 
-        new GenerateParenthesesSolution().generateParenthesis(3);
+        new GenerateParenthesesBacktrackingSolution().generateParenthesis(3);
     }
 }
