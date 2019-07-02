@@ -69,6 +69,9 @@ public class MainClass {
 //        int[] nums = {1,1,-2};
 //        List<List<Integer>> result = new ThreeSumSolution().threeSum(nums);
 
-        new GenerateParenthesesBacktrackingSolution().generateParenthesis(3);
+//        new GenerateParenthesesBacktrackingSolution().generateParenthesis(3);
+
+        ListNode head = MainClass.stringToListNode("[1,2,3,4]");
+        new SwapNodesInPairsSolution().swapPairs(head);
     }
 }
