@@ -71,7 +71,12 @@ public class MainClass {
 
 //        new GenerateParenthesesBacktrackingSolution().generateParenthesis(3);
 
-        ListNode head = MainClass.stringToListNode("[1,2,3,4]");
-        new SwapNodesInPairsSolution().swapPairs(head);
+//        ListNode head = MainClass.stringToListNode("[1,2,3,4]");
+//        new SwapNodesInPairsSolution().swapPairs(head);
+
+//        new DivideTwoIntegersSolution().divide(2147483647,3);
+
+        int[] A = {1, 3, 6, 4, 1, 2};
+        new SmallestPositiveIntegerSolution().solution(A);
     }
 }
