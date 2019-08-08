@@ -76,7 +76,9 @@ public class MainClass {
 
 //        new DivideTwoIntegersSolution().divide(2147483647,3);
 
-        int[] A = {1, 3, 6, 4, 1, 2};
-        new SmallestPositiveIntegerSolution().solution(A);
+        int[] A = {1, 4, 7, 3, 3, 5};
+//        new SmallestPositiveIntegerSolution().solution(A);
+
+        new IndicesDistanceSolution().solution(A);
     }
 }
