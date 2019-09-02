@@ -1,4 +1,8 @@
 import java.io.IOException;
+import java.sql.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class MainClass {
     public static int[] stringToIntegerArray(String input) {
@@ -76,7 +80,9 @@ public class MainClass {
 
 //        new DivideTwoIntegersSolution().divide(2147483647,3);
 
-        int[] A = {1, 3, 6, 4, 1, 2};
-        new SmallestPositiveIntegerSolution().solution(A);
+        Integer[] A = {8, 5, 66, 7, 5, 8};
+//        new SmallestPositiveIntegerSolution().solution(A);
+        List<Integer> list = Arrays.asList(A);
+        FirstTwoItemsWithoutPairSolution.getFirstTwoItemsWithoutPair(list);
     }
 }
