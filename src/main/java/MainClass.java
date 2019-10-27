@@ -76,9 +76,12 @@ public class MainClass {
 
 //        new DivideTwoIntegersSolution().divide(2147483647,3);
 
-        int[] A = {1, 4, 7, 3, 3, 5};
+        int[] A = {1, 3, 2};
 //        new SmallestPositiveIntegerSolution().solution(A);
 
-        new IndicesDistanceSolution().solution(A);
+//        new IndicesDistanceSolution().solution(A);
+
+        new NextPermutationSolution().nextPermutation(A);
+        System.out.println(A);
     }
 }
