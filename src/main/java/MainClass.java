@@ -76,12 +76,14 @@ public class MainClass {
 
 //        new DivideTwoIntegersSolution().divide(2147483647,3);
 
-        int[] A = {1, 3, 2};
+        int[] A = {3, 7, 4, 5};
 //        new SmallestPositiveIntegerSolution().solution(A);
 
 //        new IndicesDistanceSolution().solution(A);
 
-        new NextPermutationSolution().nextPermutation(A);
-        System.out.println(A);
+//        new NextPermutationSolution().nextPermutation(A);
+
+        int result = new MinimumTreesShortenedForAestheticallyPleasing().solution(A);
+        System.out.println(result);
     }
 }
