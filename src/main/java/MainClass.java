@@ -80,9 +80,19 @@ public class MainClass {
 
 //        new DivideTwoIntegersSolution().divide(2147483647,3);
 
-        Integer[] A = {8, 5, 66, 7, 5, 8};
+//        Integer[] A = {8, 5, 66, 7, 5, 8};
 //        new SmallestPositiveIntegerSolution().solution(A);
-        List<Integer> list = Arrays.asList(A);
-        FirstTwoItemsWithoutPairSolution.getFirstTwoItemsWithoutPair(list);
+//        List<Integer> list = Arrays.asList(A);
+//        FirstTwoItemsWithoutPairSolution.getFirstTwoItemsWithoutPair(list);
+        int[] A = {3, 7, 4, 5};
+//        new SmallestPositiveIntegerSolution().solution(A);
+
+//        new IndicesDistanceSolution().solution(A);
+
+//        new NextPermutationSolution().nextPermutation(A);
+
+        int result = new MinimumTreesShortenedForAestheticallyPleasing().solution(A);
+        System.out.println(result);
+
     }
 }

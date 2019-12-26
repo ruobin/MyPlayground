@@ -2,13 +2,13 @@ public class DivideTwoIntegersSolution {
 
     public int divide(int dividend, int divisor) {
         int quotient = 0;
-        boolean negativeFlagDivident = true;
+        boolean negativeFlagDividend = true;
         boolean negativeFlagDivisor = true;
         if (dividend < Integer.MIN_VALUE || dividend > Integer.MAX_VALUE) return Integer.MAX_VALUE;
         if (divisor < Integer.MIN_VALUE || divisor > Integer.MAX_VALUE) return Integer.MAX_VALUE;
         if (dividend > 0) {
             dividend = -dividend;
-            negativeFlagDivident = false;
+            negativeFlagDividend = false;
         }
         if (divisor > 0) {
             divisor = -divisor;
@@ -18,7 +18,7 @@ public class DivideTwoIntegersSolution {
             dividend = dividend - divisor;
 
             if (quotient == Integer.MAX_VALUE) {
-                if (negativeFlagDivident != negativeFlagDivisor) {
+                if (negativeFlagDividend != negativeFlagDivisor) {
                     return Integer.MIN_VALUE;
                 } else {
                     return Integer.MAX_VALUE;
@@ -26,7 +26,7 @@ public class DivideTwoIntegersSolution {
             }
             quotient++;
         }
-        if (negativeFlagDivident != negativeFlagDivisor) {
+        if (negativeFlagDividend != negativeFlagDivisor) {
             quotient = -quotient;
         }
         return quotient;
