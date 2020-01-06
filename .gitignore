@@ -1,3 +1,7 @@
 .idea/
 MyPlayground.iml
 target/
+.classpath
+.project
+.settings/
+        src/main/web/main.ts
