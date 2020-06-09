@@ -1,8 +1,5 @@
-import java.io.IOException;
-import java.sql.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import algo.MinimumTreesShortenedForAestheticallyPleasing;
+import basics.ListNode;
 
 public class MainClass {
     public static int[] stringToIntegerArray(String input) {
@@ -52,11 +49,11 @@ public class MainClass {
 //        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 //        String line;
 //        while ((line = in.readLine()) != null) {
-//            ListNode l1 = stringToListNode(line);
+//            basics.ListNode l1 = stringToListNode(line);
 //            line = in.readLine();
-//            ListNode l2 = stringToListNode(line);
+//            basics.ListNode l2 = stringToListNode(line);
 //
-//            ListNode ret = new Solution().addTwoNumbers(l1, l2);
+//            basics.ListNode ret = new Solution().addTwoNumbers(l1, l2);
 //
 //            String out = listNodeToString(ret);
 //
@@ -65,31 +62,31 @@ public class MainClass {
 
 //        new Solution().lengthOfLongestSubstring("au");
 
-//        new LongestPalindromeSolution().longestPalindrome("aaaa");
+//        new algo.LongestPalindromeSolution().longestPalindrome("aaaa");
 
-//        boolean isMatch = new RegularExpressionMatchingSolution().isMatch("aaa", "ab*a");
-//        System.out.println("RegularExpressionMatchingSolution.isMatch is " + isMatch);
+//        boolean isMatch = new algo.RegularExpressionMatchingSolution().isMatch("aaa", "ab*a");
+//        System.out.println("algo.RegularExpressionMatchingSolution.isMatch is " + isMatch);
 
 //        int[] nums = {1,1,-2};
-//        List<List<Integer>> result = new ThreeSumSolution().threeSum(nums);
+//        List<List<Integer>> result = new algo.ThreeSumSolution().threeSum(nums);
 
-//        new GenerateParenthesesBacktrackingSolution().generateParenthesis(3);
+//        new algo.GenerateParenthesesBacktrackingSolution().generateParenthesis(3);
 
-//        ListNode head = MainClass.stringToListNode("[1,2,3,4]");
-//        new SwapNodesInPairsSolution().swapPairs(head);
+//        basics.ListNode head = MainClass.stringToListNode("[1,2,3,4]");
+//        new algo.SwapNodesInPairsSolution().swapPairs(head);
 
-//        new DivideTwoIntegersSolution().divide(2147483647,3);
+//        new algo.DivideTwoIntegersSolution().divide(2147483647,3);
 
 //        Integer[] A = {8, 5, 66, 7, 5, 8};
-//        new SmallestPositiveIntegerSolution().solution(A);
+//        new algo.SmallestPositiveIntegerSolution().solution(A);
 //        List<Integer> list = Arrays.asList(A);
-//        FirstTwoItemsWithoutPairSolution.getFirstTwoItemsWithoutPair(list);
+//        algo.FirstTwoItemsWithoutPairSolution.getFirstTwoItemsWithoutPair(list);
         int[] A = {3, 7, 4, 5};
-//        new SmallestPositiveIntegerSolution().solution(A);
+//        new algo.SmallestPositiveIntegerSolution().solution(A);
 
-//        new IndicesDistanceSolution().solution(A);
+//        new algo.IndicesDistanceSolution().solution(A);
 
-//        new NextPermutationSolution().nextPermutation(A);
+//        new algo.NextPermutationSolution().nextPermutation(A);
 
         int result = new MinimumTreesShortenedForAestheticallyPleasing().solution(A);
         System.out.println(result);
