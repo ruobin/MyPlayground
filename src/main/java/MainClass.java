@@ -48,7 +48,7 @@ public class MainClass {
         return "[" + result.substring(0, result.length() - 2) + "]";
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 //        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 //        String line;
 //        while ((line = in.readLine()) != null) {
