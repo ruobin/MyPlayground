@@ -41,25 +41,26 @@ public class SecretStringWithTripletsSolution {
     }
 
     public static String recoverSecret(char[][] triplets) {
-
         Map<String, Character> relationMap = transformToMap(triplets);
         Collection<Character> firstCharacterCollection = relationMap.values();
         StringBuffer resultStringBuffer = new StringBuffer();
         Iterator<Character> firstCharacterIterator = firstCharacterCollection.iterator();
-        Set<String> relationSet = relationMap.keySet();
+        Set<String> keySet = relationMap.keySet();
 
+        //keep finding the characters according to the sequence, i.e., the first, second, third...
         while (firstCharacterIterator.hasNext()) {
-            char tmpFirstCharacter = firstCharacterIterator.next();
+            char cursor = firstCharacterIterator.next();
 
-            if (isFirstCharacter(relationSet, tmpFirstCharacter)) {
+            if (isFirstCharacter(keySet, cursor)) {
                 if (relationMap.size() > 1) {
-                    resultStringBuffer.append(tmpFirstCharacter);
+                    //the last two characters need to be handled specially
+                    resultStringBuffer.append(cursor);
                 } else {
-                    resultStringBuffer.append(relationMap.keySet().iterator().next());
+                    resultStringBuffer.append(keySet.iterator().next());
                 }
-                relationMap = removeUselessElements(relationMap, tmpFirstCharacter);
+                relationMap = removeUselessElements(relationMap, cursor);
                 firstCharacterIterator = relationMap.values().iterator();
-                relationSet = relationMap.keySet();
+                keySet = relationMap.keySet();
             }
         }
         return resultStringBuffer.toString();
