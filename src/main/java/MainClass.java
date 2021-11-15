@@ -1,4 +1,5 @@
 import algo.MinimumTreesShortenedForAestheticallyPleasing;
+import algo.ReformatPhoneNumberSolution;
 import basics.ListNode;
 
 public class MainClass {
@@ -88,7 +89,7 @@ public class MainClass {
 
 //        new algo.NextPermutationSolution().nextPermutation(A);
 
-        int result = new MinimumTreesShortenedForAestheticallyPleasing().solution(A);
+        String result = new ReformatPhoneNumberSolution().solution("555372654");
         System.out.println(result);
 
     }
