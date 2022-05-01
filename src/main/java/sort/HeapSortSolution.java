@@ -1,32 +1,42 @@
 package sort;
 
-import java.sql.Array;
-
 public class HeapSortSolution {
 
     public static void main(String[] args) {
 
-        int[] input = {3,2,5,6,9,12};
+        int[] input = {1, 3, 36, 2, 19, 25, 100, 17, 7};
         int size = input.length;
-
-        for (int i=size/2 -1; i>=0; i--) {
-            heapify(input, size, i);
-        }
+        buildHeapFromArray(input, size);
 
         for (int i = 0; i<size-1; i++) {
             int swap = input[0];
             input[0] = input[size-i-1];
             input[size-i-1] = swap;
-            heapify(input, size-i-1, 0);
+            sift(input, size-i-1, 0);
         }
 
-        System.out.println(input);
+        for (int i = 0; i < size; i++) {
+            System.out.print(input[i] + ",");
+        }
+    }
 
+    static void buildHeapFromArray(int[] input, int size) {
+        System.out.println("heapify: building a heap from an array...");
+        // build a max/min heap, and get the max/min value which is the root node
+        for (int i = size/2 - 1; i >= 0; i--) {
+            sift(input, size, i);
+        }
+
+        for (int i = 0; i < size; i++) {
+            System.out.print(input[i] + ",");
+        }
+
+        System.out.println("\n----------------");
     }
 
     // To heapify a subtree rooted with node i which is
     // an index in arr[]. n is size of heap
-    static void heapify(int arr[], int size, int node) {
+    static void sift(int arr[], int size, int node) {
         int largest = node;
         int leftChild = 2*node + 1;
         int rightChild = 2*node + 2;
@@ -44,10 +54,8 @@ public class HeapSortSolution {
             arr[node] = arr[largest];
             arr[largest] = swap;
 
-            // Recursively heapify the affected sub-tree
-            heapify(arr, size, largest);
+            // Recursively sift the affected sub-tree
+            sift(arr, size, largest);
         }
-
     }
-
 }

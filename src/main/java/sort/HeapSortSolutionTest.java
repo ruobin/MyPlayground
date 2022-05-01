@@ -2,49 +2,52 @@ package sort;
 
 public class HeapSortSolutionTest {
 
-    public static void main(String[] args) {
-        int[] input = {3,5,1,7,9,6,2};
-        heapsort(input);
+    public static void main(String[] argument) {
+        int[] arr = {1, 3, 36, 2, 19, 25, 100, 17, 7};
+
+        buildHeapFromArray(arr, arr.length);
+
+        heapSortWithHeapifiedArray(arr);
     }
 
-    private static void heapsort(int[] input) {
-        int size = input.length;
-        //heapify sub-trees first
-        for (int i=size/2-1; i>=0; i--) {
-            heapify(input, size, i);
+    static void heapSortWithHeapifiedArray(int[] arr) {
+        for (int i = arr.length - 1; i > 0; i--) {
+            int rootValue = arr[0];
+            arr[0] = arr[i];
+            arr[i] = rootValue;
+            sift(arr, i, 0);
         }
-
-        //swap the largest to the end and heapify the rest
-        for (int i=0; i<=size-1; i++) {
-            int swap = input[0];
-            input[0] = input[size-i-1];
-            input[size-1] = swap;
-            System.out.println("sorted elements: " + swap);
-            heapify(input, size-i-1, 0);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
         }
-
     }
 
-    private static void heapify(int[] array, int size, int root) {
-        if (size <= 0) return;
-        int left = root*2+1;
-        int right = root*2+2;
+    static void buildHeapFromArray(int[] arr, int size) {
+        System.out.println("building heap from array");
+        for (int i = size/2-1; i >= 0; i--) {
+            sift(arr, size, i);
+        }
+        for (int i = 0; i < size; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println("\n===================");
+    }
 
-        int largest = root;
-        if(left<size && array[left]>array[largest]) {
+    static void sift(int[] arr, int size, int parent) {
+        int left = 2 * parent + 1;
+        int right = 2 * parent + 2;
+        int largest = parent;
+        if (left < size && arr[left] > arr[parent]) {
             largest = left;
         }
-
-        if(right<size && array[right]>array[largest]) {
+        if (right < size && arr[right] > arr[largest]) {
             largest = right;
         }
-
-        if(largest != root) {
-            int swap = array[largest];
-            array[largest] = array[root];
-            array[root] = swap;
-
-            heapify(array, size, largest);
+        if (largest != parent) {
+            int swap = arr[parent];
+            arr[parent] = arr[largest];
+            arr[largest] = swap;
+            sift(arr, size, largest);
         }
     }
 }

@@ -1,3 +1,5 @@
+import algo.MaxDictinctValueCountInATreeSolution;
+import algo.MinimumIndexWithValueGreaterThanTargetSolution;
 import algo.MinimumTreesShortenedForAestheticallyPleasing;
 import algo.ReformatPhoneNumberSolution;
 import basics.ListNode;
@@ -47,49 +49,9 @@ public class MainClass {
     }
 
     public static void main(String[] args) {
-//        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-//        String line;
-//        while ((line = in.readLine()) != null) {
-//            basics.ListNode l1 = stringToListNode(line);
-//            line = in.readLine();
-//            basics.ListNode l2 = stringToListNode(line);
-//
-//            basics.ListNode ret = new Solution().addTwoNumbers(l1, l2);
-//
-//            String out = listNodeToString(ret);
-//
-//            System.out.print(out);
-//        }
-
-//        new Solution().lengthOfLongestSubstring("au");
-
-//        new algo.LongestPalindromeSolution().longestPalindrome("aaaa");
-
-//        boolean isMatch = new algo.RegularExpressionMatchingSolution().isMatch("aaa", "ab*a");
-//        System.out.println("algo.RegularExpressionMatchingSolution.isMatch is " + isMatch);
-
-//        int[] nums = {1,1,-2};
-//        List<List<Integer>> result = new algo.ThreeSumSolution().threeSum(nums);
-
-//        new algo.GenerateParenthesesBacktrackingSolution().generateParenthesis(3);
-
-//        basics.ListNode head = MainClass.stringToListNode("[1,2,3,4]");
-//        new algo.SwapNodesInPairsSolution().swapPairs(head);
-
-//        new algo.DivideTwoIntegersSolution().divide(2147483647,3);
-
-//        Integer[] A = {8, 5, 66, 7, 5, 8};
-//        new algo.SmallestPositiveIntegerSolution().solution(A);
-//        List<Integer> list = Arrays.asList(A);
-//        algo.FirstTwoItemsWithoutPairSolution.getFirstTwoItemsWithoutPair(list);
         int[] A = {3, 7, 4, 5};
-//        new algo.SmallestPositiveIntegerSolution().solution(A);
 
-//        new algo.IndicesDistanceSolution().solution(A);
-
-//        new algo.NextPermutationSolution().nextPermutation(A);
-
-        String result = new ReformatPhoneNumberSolution().solution("555372654");
+        int result = new MinimumIndexWithValueGreaterThanTargetSolution().solution(new int[]{1, 3, 5, 7, 9, 11}, 8);
         System.out.println(result);
 
     }
