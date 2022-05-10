@@ -31,8 +31,7 @@ class Student {
 
 class Priorities {
     public List<Student> getStudents(List<String> events) {
-        Queue queue = new PriorityQueue(events.size(), new Comparator<Student>() {
-
+        Queue<Student> queue = new PriorityQueue<Student>(events.size(), new Comparator<Student>() {
             @Override
             public int compare(Student s1, Student s2) {
                 if (s1.getCGPA() > s2.getCGPA()) {
@@ -41,7 +40,8 @@ class Priorities {
                     return 1;
                 }
 
-                if (s1.getName().compareTo(s2.getName()) != 0) return s1.getName().compareTo(s2.getName());
+                if (s1.getName().compareTo(s2.getName()) != 0)
+                    return s1.getName().compareTo(s2.getName());
 
                 return (s1.getID() - s2.getID());
             }
@@ -57,7 +57,7 @@ class Priorities {
         }
 
         List<Student> students = new ArrayList<>(queue.size());
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             students.add((Student) queue.poll());
         }
         return students;
@@ -82,7 +82,7 @@ public class StudentsPriorityQueue {
         if (students.isEmpty()) {
             System.out.println("EMPTY");
         } else {
-            for (Student st: students) {
+            for (Student st : students) {
                 System.out.println(st.getName());
             }
         }
