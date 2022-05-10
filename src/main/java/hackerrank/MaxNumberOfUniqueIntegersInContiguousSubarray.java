@@ -1,4 +1,4 @@
-package algo;
+package hackerrank;
 
 import java.util.*;
 

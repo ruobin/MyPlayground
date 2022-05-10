@@ -1,7 +1,4 @@
-import algo.MaxDictinctValueCountInATreeSolution;
 import algo.MinimumIndexWithValueGreaterThanTargetSolution;
-import algo.MinimumTreesShortenedForAestheticallyPleasing;
-import algo.ReformatPhoneNumberSolution;
 import basics.ListNode;
 
 public class MainClass {
@@ -14,7 +11,7 @@ public class MainClass {
 
         String[] parts = input.split(",");
         int[] output = new int[parts.length];
-        for(int index = 0; index < parts.length; index++) {
+        for (int index = 0; index < parts.length; index++) {
             String part = parts[index].trim();
             output[index] = Integer.parseInt(part);
         }
@@ -28,7 +25,7 @@ public class MainClass {
         // Now convert that list into linked list
         ListNode dummyRoot = new ListNode(0);
         ListNode ptr = dummyRoot;
-        for(int item : nodeValues) {
+        for (int item : nodeValues) {
             ptr.next = new ListNode(item);
             ptr = ptr.next;
         }
@@ -49,9 +46,9 @@ public class MainClass {
     }
 
     public static void main(String[] args) {
-        int[] A = {3, 7, 4, 5};
+        int[] A = { 3, 7, 4, 5 };
 
-        int result = new MinimumIndexWithValueGreaterThanTargetSolution().solution(new int[]{1, 3, 5, 7, 9, 11}, 8);
+        int result = new MinimumIndexWithValueGreaterThanTargetSolution().solution(new int[] { 1, 3, 5, 7, 9, 11 }, 8);
         System.out.println(result);
 
     }

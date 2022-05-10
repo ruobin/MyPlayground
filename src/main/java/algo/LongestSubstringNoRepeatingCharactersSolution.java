@@ -5,7 +5,6 @@ import java.util.Map;
 
 public class LongestSubstringNoRepeatingCharactersSolution {
 
-
     /**
      * problem 2 - brutal force
      *
@@ -20,12 +19,13 @@ public class LongestSubstringNoRepeatingCharactersSolution {
 
         int result = 1;
         Map map = new HashMap();
-        for (int i=0; i<chars.length; i++) {
-            if (result > chars.length-i) break;
+        for (int i = 0; i < chars.length; i++) {
+            if (result > chars.length - i)
+                break;
             map.clear();
             map.put(chars[i], null);
-            for (int j=i+1; j<chars.length; j++) {
-                if(map.containsKey(chars[j])) {
+            for (int j = i + 1; j < chars.length; j++) {
+                if (map.containsKey(chars[j])) {
                     if (map.size() > result) {
                         result = map.size();
                     }
@@ -59,7 +59,7 @@ public class LongestSubstringNoRepeatingCharactersSolution {
         int j = 1;
         map.put(s.charAt(i), i);
         map.put(s.charAt(j), j);
-        while(i<stringLength && j<stringLength) {
+        while (i < stringLength && j < stringLength) {
             if (!map.containsKey(s.charAt(j++))) {
 
             } else {
@@ -67,9 +67,8 @@ public class LongestSubstringNoRepeatingCharactersSolution {
                 i = duplicateIndex;
             }
             map.put(s.charAt(j), j);
-            result = Math.max(result,j-i+1);
+            result = Math.max(result, j - i + 1);
         }
-
 
         return result;
     }
