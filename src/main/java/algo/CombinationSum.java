@@ -9,21 +9,19 @@ public class CombinationSum {
     public static List<List<Integer>> combinationSum(int[] candidates, int target) {
         Arrays.sort(candidates);
         List<Integer> list = new ArrayList<Integer>();
-        findNextFitElement(list, 0, candidates, target);
+        findNextFitElement(list, 0, 0, candidates, target);
         return results;
     }
     
-    static List<Integer> findNextFitElement(List<Integer> currentList, int currentSum, int[] candidates, int target) {
+    static List<Integer> findNextFitElement(List<Integer> currentList, int currentSum, int currentIndex, int[] candidates, int target) {
         if (currentSum < target) {
-            for (int i = 0; i < candidates.length; i++) {
-                if (currentList.size() > 0 && candidates[i] < currentList.get(currentList.size() - 1))
-                    continue;
+            for (int i = currentIndex; i < candidates.length; i++) {
                 int nextSum = currentSum + candidates[i];
                 if (nextSum > target)
                     break;
                 List<Integer> nextList = new ArrayList<Integer>(currentList);
                 nextList.add(candidates[i]);
-                findNextFitElement(nextList, nextSum, candidates, target);
+                findNextFitElement(nextList, nextSum, i, candidates, target);
             }
         }
         if (currentSum == target) {
