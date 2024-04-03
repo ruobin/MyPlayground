@@ -8,14 +8,14 @@ import java.util.Map;
 
 public class ObjectDiffer {
 
-    public static Map<String, String> diffObjects(Object obj1, Object obj2) {
+    public static Map<String, Object> diffObjects(Object obj1, Object obj2) {
 
-        Map<String, String> diffResult = new HashMap<>();
+        Map<String, Object> diffResult = new HashMap<>();
 
         if (obj1.getClass() != obj2.getClass()) {
             String remark = "Objects are of different types, cannot compare.";
-            diffResult.put("match", "false");
-            diffResult.put("remark", remark);
+            diffResult.put("matches", false);
+            diffResult.put("diffs", remark);
             System.out.println(remark);
             return diffResult;
         }
@@ -23,6 +23,7 @@ public class ObjectDiffer {
         Class<?> clazz = obj1.getClass();
         Field[] fields = clazz.getDeclaredFields();
         StringBuilder sb = new StringBuilder();
+        Boolean matches = true;
         for (Field field : fields) {
             try {
                 String fieldName = field.getName();
@@ -33,13 +34,14 @@ public class ObjectDiffer {
                 if (!value1.equals(value2)) {
                     String remark = "Difference found in field: " + fieldName + "\n" + "Value in obj1: " + value1 + "\n" + "Value in obj2: " + value2 + "\n";
                     sb.append(remark);
+                    matches = false;
                 }
             } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
                 e.printStackTrace();
             }
         }
-        diffResult.put("match", "false");
-        diffResult.put("remark", sb.toString());
+        diffResult.put("matches", matches);
+        diffResult.put("diffs", sb.toString());
         System.out.println(sb);
         return diffResult;
     }
